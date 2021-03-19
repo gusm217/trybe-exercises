@@ -22,3 +22,37 @@
 .border {
   border: 5px solid black;
 }
+
+.super-mario {
+  width: 300px;
+}
+
+.goomba {
+  width: 150px;
+  margin-left: 115px;
+}
+
+.baloon {
+  position: absolute;
+  z-index: 1;
+}
+
+.bowser {
+  padding-left: 200px;
+  padding-top: 20px;
+}
+
+.word {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 50px;
+  z-index: 2;
+}
+
+p {
+  padding: 40px;
+}
+
+.space {
+  padding: 50px;
+}
