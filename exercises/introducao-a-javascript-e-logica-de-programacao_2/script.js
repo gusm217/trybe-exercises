@@ -62,3 +62,11 @@ for (let i = 0; i < numbers.length; i+=1) {
 }
 console.log(menorValor)
 
+// 8
+let newArray =  []
+
+for (let i = 1; i < 26; i += 1) {
+    newArray.push(i)
+}
+
+console.log(newArray)
