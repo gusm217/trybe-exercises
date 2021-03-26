@@ -70,3 +70,11 @@ for (let i = 1; i < 26; i += 1) {
 }
 
 console.log(newArray)
+
+// 9
+let arrayPor2 = [] 
+
+for (let i = 0; i < newArray.length; i += 1)  {
+    arrayPor2.push(newArray[i]/2)
+}
+console.log(arrayPor2)
