@@ -55,3 +55,17 @@ for (let index = 1; index <= n; index += 1){
         console.log('\n')
     }
 }
+
+// --------------- EXERCÍCIOS BÔNUS ---------------------
+// 
+// Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+// n = 7
+
+//    *
+//   * *
+//  *   *
+// *******
+
+if (n % 2 != 0) {
+    
+}
