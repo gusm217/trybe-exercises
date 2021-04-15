@@ -10,19 +10,31 @@
     <form action="">
     <fieldset>
         <label for="name">Nome</label>
-        <input type="text" name="nome" id="name" required maxlength="40">
+        <input type="text" name="name" id="nome" required maxlength="40">
         <br>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required maxlength="50">        
         <br>
         <label for="cpf">CPF</label>
         <input type="text" name="cpf" id="cpf" required maxlength="11">
-
-
-
-
-
-
+        <br>
+        <label for="endereço">endereço</label>
+        <input type="text" name="adress" required maxlength="200" id="endereço">
+        <br>
+        <label for="cidade">Cidade</label>
+        <input type="text" name="city" required maxlength="28" id="cidade">
+        <br>
+        <label for="">Estado</label>
+        <select name="states" required id="estados">
+            <option value=""></option>
+        </select>
+        <br>
+        <label for="">Tipo:</label>                
+        <label for="">Casa</label>
+        <input type="radio" name="home-type" required id="tipo-casa">        
+        <label for="">Apartamento</label>
+        <input type="radio" name="home-type" required id="tipo-casa">
+        
     </fieldset>
     </form>
 </body>
