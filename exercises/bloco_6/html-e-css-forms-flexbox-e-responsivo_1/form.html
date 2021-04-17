@@ -24,17 +24,29 @@
         <label for="cidade">Cidade</label>
         <input type="text" name="city" required maxlength="28" id="cidade">
         <br>
-        <label for="">Estado</label>
+        <label for="estados">Estado</label>
         <select name="states" required id="estados">
             <option value=""></option>
         </select>
         <br>
         <label for="">Tipo:</label>                
-        <label for="">Casa</label>
+        <label for="tipo-casa">Casa</label>
         <input type="radio" name="home-type" required id="tipo-casa">        
-        <label for="">Apartamento</label>
-        <input type="radio" name="home-type" required id="tipo-casa">
-        
+        <label for="tipo-ap">Apartamento</label>
+        <input type="radio" name="home-type" required id="tipo-ap">        
+    </fieldset>
+    <fieldset>
+        <label for="resumo-curriculo">Resumo do Currículo</label>
+        <textarea name="resume" id="resumo-curriculo" required cols=50" rows="10"> </textarea>
+        <br>
+        <label for="cargo">Cargo</label>
+        <input type="text" name="position" id="cargo" required maxlength="40">
+        <br>
+        <label for="descriçao-cargo">Descrição do Cargo</label>
+        <input type="text" name="position-description" id="descriçao-cargo" required maxlength="500">
+        <br>
+        <label for="">Data de Iníco</label>
+        <input type="text" name="date" id="data" value="dd/mm/yyyy">
     </fieldset>
     </form>
 </body>
