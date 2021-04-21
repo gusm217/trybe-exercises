@@ -8,23 +8,31 @@ function createDaysOfTheWeek() {
       dayListItem.innerHTML = days;
   
       weekDaysList.appendChild(dayListItem);
-    };
-    const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
-    for (let index = 0; index < dezDaysList.length; index += 1) {
-        let liDays = document.createElement('li');
-        liDays.className = 'day';
-        liDays.innerHTML = dezDaysList[index];
-        if (liDays[index] === 24 && liDays[index] === 25 && liDays[index] === 31) {
-            liDays[index].className = 'holiday';
-        } else if (liDays[index] === 4 && liDays[index] === 11 && liDays[index] === 18 && liDays[index] === 25) {
-            liDays[index].className = 'friday';
-        }     
+	};
+}
 
-        weekDaysList.appendChild(liDays);
-    }
+createDaysOfTheWeek();
+    
+// Parte 1:
+function createNumDays() {
+	const weekDaysList = document.querySelector('.week-days');
+	const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-  };
-  
-  createDaysOfTheWeek();
-  
-  
+	for (let day in dezDaysList) {
+		let numDays = document.createElement('li');
+		numDays.innerHTML = dezDaysList[day];
+		numDays.classList.add('day');
+		
+		// adicionado +1 ao day pois array começa no zero;
+		if (day === '25' || day === '26' || day === '32') {
+			numDays.classList.add('holiday');
+		}
+		if (day === '5' || day === '12' || day === '19' || day === '26') {
+			numDays.classList.add('friday');
+		}
+
+	weekDaysList.appendChild(numDays);
+	}
+}
+
+createNumDays();
