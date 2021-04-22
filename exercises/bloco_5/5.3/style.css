@@ -17,9 +17,17 @@ button {
 
 .buttons-container {
   background-color: #eee;
-  display: inline-block;
+  display: flex;
   text-align: center;
   width: 100%;
+}
+
+#btn-holiday {
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  margin: 20px auto;
+  font-size: large;
 }
 
 #days {
