@@ -1,0 +1,84 @@
+body {
+  background-image: url(https://media.istockphoto.com/photos/underwater-background-in-sea-picture-id506468233?k=6&m=506468233&s=612x612&w=0&h=vZQuCypCJXvjnXwMbecO-N4nbURF8Nbf-RhuQjErE0g=);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+}
+
+a:link {
+  color: white;
+}
+
+#header {
+  background-color: aquamarine;
+}
+
+#nav a {
+  background-color: lightcoral;
+  display: inline-block;
+  padding: 10px;
+}
+
+main {
+  padding: 10px;
+}
+
+#global-section {
+  width: 80%;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#first-section {
+  width: 40%;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+#second-section {
+  margin-top: 50px;
+}
+
+#last-section {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50%;
+}
+
+#references {
+  bottom: 0;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+}
+
+#table {
+  display: inline-block;
+  float: right;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+tr,
+td,
+th {
+  padding: 0 10px;
+}
+
+.columns-section {
+  width: 30%;
+  display: inline-block;
+}
+
+#column-1 {
+  float: left;
+}
+
+#column-3 {
+  float: right;
+}
