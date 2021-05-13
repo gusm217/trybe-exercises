@@ -38,7 +38,7 @@ const promise = () => {
 
   isBiggerThanEigthk
     .then((sum) => console.log(`Promise resolvida\n /2: ${sum / 2}\n /3: ${sum / 3}\n /5: ${sum / 5}\n /10: ${sum / 10}`))
-    .catch((sum) => console.log(`Promise rejeitada, ${sum}`))
+    .catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`))
 };
 
 promise();
