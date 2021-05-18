@@ -27,17 +27,18 @@ const promise = () => {
     }
     
     let sum = 0;  
-    array.forEach((num) => sum += num)
+    array.forEach((num) => sum += num);
     
     if (sum < 8000) {
       resolve(sum);
     } else {
       reject(sum);
     }
-  })
+  })  
 
   isBiggerThanEigthk
     .then((sum) => console.log(`Promise resolvida\n /2: ${sum / 2}\n /3: ${sum / 3}\n /5: ${sum / 5}\n /10: ${sum / 10}`))
+    .then((array) => console.log(array.reduce((sum, value) => sum + value, 0)))
     .catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`))
 };
 
