@@ -1,8 +1,9 @@
 const fs = require('fs');
+const readline = require('readline-sync');
 
 function imcCalc() {
-  const altura = 1.72
-  const peso = 86
+  const altura = readline.questionFloat('Qual sua altura? ');
+  const peso = readline.questionFloat('Qual seu peso? ');
   const IMC = (peso / altura ** 2 )   
   
   switch(true){
