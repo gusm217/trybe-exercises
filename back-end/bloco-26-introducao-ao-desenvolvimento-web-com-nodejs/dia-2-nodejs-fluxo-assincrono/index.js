@@ -28,20 +28,34 @@
 // Caso a Promise seja rejeitada, escreva na tela o motivo da rejeição.
 // Caso a Promise seja resolvida, escreva na tela o resultado do cálculo.
 
-function randomNum() {
+// function randomNum() {
+//   let num1 = Math.floor(Math.random() * 100 + 1)
+//   let num2 = Math.floor(Math.random() * 100 + 1)
+//   let num3 = Math.floor(Math.random() * 100 + 1) 
+//   const promise = new Promise ((resolve, reject) => {
+//     if(num3 === 0) reject(new Error("Não pode ser zero"))   
+//     resolve((num1 + num2) * num3)
+//   })
+
+//   return promise
+// }
+
+// randomNum()
+//   .then(res => console.log(res))
+//   .catch(err => console.log(err))
+
+// 3 - Reescreva o código do exercício anterior para que utilize async/await.
+
+async function randomNum() {
   let num1 = Math.floor(Math.random() * 100 + 1)
   let num2 = Math.floor(Math.random() * 100 + 1)
   let num3 = Math.floor(Math.random() * 100 + 1) 
-  const promise = new Promise ((resolve, reject) => {
-    if(num3 === 0) reject(new Error("Não pode ser zero"))   
-    resolve((num1 + num2) * num3)
-  })
-
-  return promise
+  const resultado = ((num1 + num2) * num3)
+  try {
+    await console.log(resultado)
+  } catch (err) {
+    return console.log(err)
+  }  
 }
 
 randomNum()
-  .then(res => console.log(res))
-  .catch(err => console.log(err))
-
-  
