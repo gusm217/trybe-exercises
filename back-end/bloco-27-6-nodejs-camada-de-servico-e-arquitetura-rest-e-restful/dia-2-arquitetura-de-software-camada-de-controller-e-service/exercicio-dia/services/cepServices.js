@@ -6,6 +6,14 @@ const getCep = async (cep) => {
   return fetchCep;
 }
 
+const createCep =  async (cep, logradouro, bairro, localidade, uf) => {
+  const newCep = cepModel.getCep(cep, logradouro, bairro, localidade, uf);
+
+  if(cep )
+  
+  return newCep;
+}
+
 module.exports = {
   getCep,
 }

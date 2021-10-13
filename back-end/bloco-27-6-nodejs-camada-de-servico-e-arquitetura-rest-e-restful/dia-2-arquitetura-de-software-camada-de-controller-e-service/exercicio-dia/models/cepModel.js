@@ -12,6 +12,18 @@ const getCep = async (cep) => {
   }
 }
 
+const createCep = async (cep, logradouro, bairro, localidade, uf) => {
+  try {
+    await connection.execute(
+      'INSERT INTO cep_lookup.ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?)', 
+      [cep, logradouro, bairro, localidade, uf]
+    )    
+  } catch(err) {
+    console.log(err)
+  }
+}
+
 module.exports = {
   getCep,
+  createCep,
 }
