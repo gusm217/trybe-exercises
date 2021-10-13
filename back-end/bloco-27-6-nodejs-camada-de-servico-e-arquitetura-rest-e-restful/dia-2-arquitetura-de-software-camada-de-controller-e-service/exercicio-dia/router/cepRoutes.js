@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const cepContoller = require('../controllers/cepController')
+const { validateCep } = require('../middlewares/cepMiddlewares');
+const cepController = require('../controllers/cepController')
 
-router.get('/:cep', cepContoller);
+router.get('/:cep', validateCep, cepController.getCep);
 
 module.exports = router
