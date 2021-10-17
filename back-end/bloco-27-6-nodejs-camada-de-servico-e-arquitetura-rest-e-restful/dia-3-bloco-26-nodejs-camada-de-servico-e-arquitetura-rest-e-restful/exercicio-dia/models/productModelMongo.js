@@ -1,12 +1,15 @@
-const connection = require('../connections/MongoDBConnection');
-const { ObjectId } = require('mongodb');
-const { connect } = require('../controllers/productController');
+const connection = require("../connections/MongoDBConnection");
+const { ObjectId } = require("mongodb");
+const { connect } = require("../controllers/productController");
 
 const add = async (name, brand) => {
-  return connection()
-    .then((db) => db.collection('products').insertOne({name, brand})
-    .then((result) => ({id: result.insertId, name, brand}))
-    .catch((err) => err));
+  return connection().then((db) =>
+    db
+      .collection("products")
+      .insertOne({ name, brand })
+      .then((result) => ({ id: result.insertId, name, brand }))
+      .catch((err) => err)
+  );
 };
 
 // const add = async (name, brand) => {
@@ -27,17 +30,17 @@ const add = async (name, brand) => {
 
 const getAll = async () => {
   return connection()
-      .then((db) => db.collection('products').find().toArray())
-          .then((products) =>
-              products.map(({ _id, name, brand }) =>
-              getNewProduct({
-                  id: _id,
-                  name,
-                  brand
-              })
-          )
-      );
-}
+    .then((db) => db.collection("products").find().toArray())
+    .then((products) =>
+      products.map(({ _id, name, brand }) =>
+        getNewProduct({
+          id: _id,
+          name,
+          brand,
+        })
+      )
+    );
+};
 
 // const getAll = async () => {
 //   try {
@@ -51,10 +54,9 @@ const getAll = async () => {
 
 const getById = async (id) => {
   return connection()
-    .then((db) => db.collection('products').findOne({_id: ObjectId(id)}))
+    .then((db) => db.collection("products").findOne({ _id: ObjectId(id) }))
     .then((result) => result)
-    .catch((err) => err)
-
+    .catch((err) => err);
 };
 
 // const getById = async (id) => {
@@ -70,14 +72,18 @@ const getById = async (id) => {
 
 const update = async (id, name, brand) => {
   return connection()
-    .then((db) => db.collection('products').updateOne({_id: ObjectId(id), { $set: { name, brand } }))
-    .then(() => ({_id: ObjectId(id), name, brand}))
-    .catch((err) => err)
+    .then((db) =>
+      db
+        .collection("products")
+        .updateOne({ _id: ObjectId(id) }, { $set: { name, brand } })
+    )
+    .then(() => ({ _id: ObjectId(id), name, brand }))
+    .catch((err) => err);
 };
 
 // const update = async (id, name, brand) => {
 //   try {
-//     const [result] = await connection.query('UPDATE rest_exercicios.products SET (name, brand) VALUES ?, ? WHERE id = ?', [name, brand, id]) 
+//     const [result] = await connection.query('UPDATE rest_exercicios.products SET (name, brand) VALUES ?, ? WHERE id = ?', [name, brand, id])
 //     if (!result) return null;
 //     return result;
 //   } catch (err) {
@@ -86,10 +92,10 @@ const update = async (id, name, brand) => {
 // }
 
 const exclude = async (id) => {
-  return connection() 
-    .then((db) => db.collection('products').deleteOne({id: ObjectId(id)}) )
+  return connection()
+    .then((db) => db.collection("products").deleteOne({ id: ObjectId(id) }))
     .then((result) => result)
-    .catch((err) => err)
+    .catch((err) => err);
 };
 
 // const exclude = async (id) => {
