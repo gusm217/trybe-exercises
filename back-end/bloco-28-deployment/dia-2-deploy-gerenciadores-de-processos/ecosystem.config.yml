@@ -1,0 +1,9 @@
+apps:
+  - name: dia-2-deploy-gerenciadores-de-processos
+    script: ./index.js
+    max_memory_restart: 100M
+    exec_mode: cluster
+    instances: max
+    watch: true
+    env_prod: { NODE_ENV: production }
+    env_homolog: { NODE_ENV: development }
