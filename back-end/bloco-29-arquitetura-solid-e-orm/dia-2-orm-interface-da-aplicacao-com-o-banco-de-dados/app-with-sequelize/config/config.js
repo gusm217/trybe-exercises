@@ -1,11 +1,9 @@
-require('dotenv').config();
-
 module.exports = {
   development: {
-    username: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
-    host: process.env.HOSTNAME,
+    username: 'root',
+    password: null,
+    database: 'studying_sequelize',
+    host: 'localhost',
     dialect: 'mysql',
   },
   test: {
